@@ -4,12 +4,11 @@ let counter = 0;
 
 const sendMessage = async (username, message) => {
     while (true) {
-        try {
             const date = new Date();
             const minutes = date.getMinutes();
             const hours = date.getHours();
             const formattedDate = `${hours}:${minutes}`;
-
+        try {
             const deviceId = crypto.randomBytes(21).toString("hex");
             const url = "https://ngl.link/api/submit";
             const headers = {
